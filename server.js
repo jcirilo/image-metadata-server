@@ -5,8 +5,9 @@ const cors = require('cors');
 const { exiftool } = require('exiftool-vendored');
 const fs = require('fs');
 
-require('dotenv').config();
-const PORT = process.env.PORT || 3001;
+//require('dotenv').config();
+
+const PORT = 3001;
 
 const app = express();
 
@@ -99,5 +100,5 @@ app.post('/remove-metadata', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`rodando na porta ${PORT}`);
+  console.log(`rodando em http://localhost:${PORT}`);
 });
